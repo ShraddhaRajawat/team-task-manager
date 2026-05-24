@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fancy-page-bg {
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.14), transparent 32%),
+    radial-gradient(circle at 90% 20%, rgba(236, 72, 153, 0.14), transparent 30%),
+    radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.12), transparent 28%);
+}
+
+.fancy-card {
+  background: color-mix(in oklab, white 86%, #eef2ff 14%);
+}
+
+.dark .fancy-card {
+  background: color-mix(in oklab, #09090b 84%, #312e81 16%);
+}
+
+.interactive-card {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.interactive-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(79, 70, 229, 0.16);
+  border-color: color-mix(in oklab, #6366f1 50%, #d4d4d8 50%);
+}
+
+.dark .interactive-card:hover {
+  box-shadow: 0 14px 32px rgba(56, 189, 248, 0.12);
+  border-color: color-mix(in oklab, #818cf8 50%, #27272a 50%);
+}
+
+.interactive-button {
+  background-size: 160% 160%;
+  transition: transform 180ms ease, filter 180ms ease, box-shadow 180ms ease, background-position 300ms ease;
+}
+
+.interactive-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  background-position: 80% 50%;
+  box-shadow: 0 10px 22px rgba(124, 58, 237, 0.3);
+}
+
+.interactive-input {
+  transition: box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.interactive-input:focus {
+  border-color: color-mix(in oklab, #6366f1 52%, #d4d4d8 48%);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.18);
+}
+
+.dark .interactive-input:focus {
+  border-color: color-mix(in oklab, #818cf8 52%, #27272a 48%);
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.22);
+}
+
+.fancy-row {
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.fancy-row:hover {
+  background: color-mix(in oklab, white 90%, #e0e7ff 10%);
+}
+
+.dark .fancy-row:hover {
+  background: color-mix(in oklab, #09090b 88%, #312e81 12%);
+}
