@@ -2,6 +2,8 @@
 
 Modern full-stack Team Task Manager built with Next.js App Router, NextAuth, MongoDB, and role-based workflows for Admin and Member users.
 
+### 🌐 Live Demo: [https://team-task-manager-production-aa48.up.railway.app](https://team-task-manager-production-aa48.up.railway.app)
+
 ---
 
 ## Developer
@@ -150,32 +152,6 @@ Build and start commands:
 npm run build
 npm run start
 ```
-
----
-
-## Screenshots
-
-### Admin View
-
-<p align="center">
-  <img src="./Screenshots/login_admin.png" alt="Admin Login" width="420" />
-  <img src="./Screenshots/dashboard_admin.png" alt="Admin Dashboard" width="420" />
-</p>
-<p align="center">
-  <img src="./Screenshots/project_admin.png" alt="Admin Projects" width="420" />
-  <img src="./Screenshots/task_admin.png" alt="Admin Tasks" width="420" />
-</p>
-
-### Member View
-
-<p align="center">
-  <img src="./Screenshots/login_members.png" alt="Member Login" width="420" />
-  <img src="./Screenshots/dashboard_members.png" alt="Member Dashboard" width="420" />
-</p>
-<p align="center">
-  <img src="./Screenshots/projects_member.png" alt="Member Projects" width="420" />
-  <img src="./Screenshots/tasks_member.png" alt="Member Tasks" width="420" />
-</p>
 
 ---
 
