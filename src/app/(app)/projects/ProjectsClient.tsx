@@ -17,8 +17,8 @@ export function ProjectsClient({
   initialProjects: Project[];
 }) {
   const router = useRouter();
-  const [teams] = useState<Team[]>(initialTeams);
-  const [projects] = useState<Project[]>(initialProjects);
+  const teams = initialTeams;
+  const projects = initialProjects;
 
   const [teamName, setTeamName] = useState("");
   const [joinTeamId, setJoinTeamId] = useState("");

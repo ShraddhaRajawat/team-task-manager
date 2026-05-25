@@ -5,9 +5,9 @@ const bcrypt = require("bcryptjs");
 
 // Load .env.local manually to get MONGODB_URI
 const envPath = path.join(__dirname, "..", "..", ".env.local");
-let mongodbUri = "mongodb://127.0.0.1:27017/team-task-manager";
+let mongodbUri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/team-task-manager";
 
-if (fs.existsSync(envPath)) {
+if (!process.env.MONGODB_URI && fs.existsSync(envPath)) {
   const envContent = fs.readFileSync(envPath, "utf-8");
   const lines = envContent.split("\n");
   for (const line of lines) {

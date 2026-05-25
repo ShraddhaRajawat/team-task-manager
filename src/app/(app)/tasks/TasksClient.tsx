@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
@@ -47,7 +47,11 @@ export function TasksClient({
   const router = useRouter();
   const [tasks, setTasks] = useState<TaskItem[]>(initialTasks);
 
-  const [projects] = useState<ProjectItem[]>(initialProjects);
+  useEffect(() => {
+    setTasks(initialTasks);
+  }, [initialTasks]);
+
+  const projects = initialProjects;
   const [assignees, setAssignees] = useState<UserItem[]>([]);
   const [creating, setCreating] = useState(false);
 
