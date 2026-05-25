@@ -155,7 +155,28 @@ npm run start
 
 ---
 
+## Screenshots
+
+### Admin View
+
+<p align="center">
+  <img src="./Screenshots/dashboard_admin.png" alt="Admin Dashboard" width="450" />
+  <img src="./Screenshots/project_admin.png" alt="Admin Projects" width="450" />
+</p>
+<p align="center">
+  <img src="./Screenshots/task_admin.png" alt="Admin Tasks" width="450" />
+</p>
+
+### Member View
+
+<p align="center">
+  <img src="./Screenshots/dashboard_members.png" alt="Member Dashboard" width="450" />
+</p>
+
+---
+
 ## License
 
 For personal/educational use.
+
 
